@@ -1,0 +1,23 @@
+datapath: './data/dichalcogenides_public'
+test_datapath: './data/dichalcogenides_private'
+checkpoint_path: './callback/val_mae_00779_0.040351.hdf5'
+
+data_preprocessing:
+  train: True
+  new_datapath: './new_data'
+  test: True
+  new_test_datapath: './new_test_data'
+  json_path: './cgcnn/data/sample-regression/atom_init.json'
+  target_file: 'id_prop.csv'
+
+model:
+  path: './model_best.pth.tar' #'./cgcnn/pre-trained/band-gap.pth.tar'
+  batch_size: 1
+  num_workers: 0
+  disable_cuda: False
+
+embeddings:
+  train: True
+  train_name: 'train_embeddings'
+  test: True
+  test_name: 'test_embeddings'
